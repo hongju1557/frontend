@@ -6,13 +6,28 @@
     <title>입력양식</title>
 </head>
 <body>
-    <form action="/frontend-1/html/수습 국원 모집.html" target="_blank" >
-
+    <!--
+    <form> 폼 삽입
+    <input/>
+    button 버튼 submit 서버에 전송
+    로그인처리 id,pw -> 유저테이블에 일치 유저 존재 여부
+    로그인성공 main.html<-
+    로그인실패 실패 메세지 처리/실패 페이지<-
+    보내는 방식 get post
+    method 
+    action ex login_action.html 경로 입력
+    type = text 텍스트
+            id - 데이터 선택 name - 데이터 서버 전달
+    
+    -->
+    <form action="/submit" method="post" target="_blank" >
+        <fieldset>
         <legend><h1>입력정보</h1></legend>
             이름 <input type="text" name="text"><br><br>
             전화 <input type="text" name="text"><br><br>
             이메일 <input type="text" name="text"><br><br>
                 <input type="button" name="전송" value="예약하기">
+        </fieldset>
     </form>
 </body>
 </html>

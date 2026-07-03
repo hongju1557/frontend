@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>입력양식</title>
+    <style>
+        /* 
+        선택자 : 요소를 선택
+        #아이디 - 아이디 선택
+        선택자{
+        속성 : 값;
+        속성 : 값;
+        width :30px;
+        height : 20px;
+        }
+        */
+           /*
+    display 
+    블록요소
+    인라인 컨텐츠
+    인라인블록
+    요소선택 css #아이디 태그
+    */
+    label {
+        display: inline-block;
+        width: 100px;
+
+    }
+        #number {
+        width: 20em;
+        height : 5em;
+        }
+    </style>
+</head>
+<body>
+<!--
+카밀표기법 - 각 단어의 첫글자를 대문자로 써서 구분
+스네이크 표기법 - 언더바로 단어 구분
+form
+action : 요청하려는 페이지의 주소
+method : get, post 요청방식
+name : 자바스크립트로 폼을 제어하기 위해 사용
+
+팝업 - 새 창 열기 
+모달 - 페이지내에 띄워주기
+프로토콜(통신규약) https://
+IP 127.0.01
+port :5500
+/경로
+?쿼리스트링
+-->
+
+<h1>입력양식</h1>
+<form action="loginAction.html" method="get" name="loginform" target="_blank">
+    id : <input type="text" name="id" minlength="4" maxlength="12" required ><br>
+    아이디는 4자이상 12자 이하로 작성 가능합니다<br>
+    
+    pw : <input type="password" name="pw" required> <br>
+
+<!--버튼의 종류
+submit - form 태그의 action 속성을 method 속성에 정의된 방식으로 서버에 요청 (미지정시 기본값인 get방식)
+
+-->
+    <input type="button" value="로그인">
+    <input type="submit" value="서브밋">
+    <input type="reset" value="리셋">
+</form>
+
+<br>
+
+<hr>
+
+<h1>입력양식의 종류</h1>
+
+<form action="loginAction.html" method="get" target="_blank">
+
+ 
+    <fieldset>
+        <legend>텍스트입력 양식</legend>
+    <!--
+    placeholder 입력창이 비어있을떄 힌트를 표시
+    value 기본적으로 입력돼있는 값
+    -->
+
+    <label for="test">
+        <!--레이블 : 입력양식과 묶어주는 역할
+        label for ="id" - 요소의 id와 연결
+
+        레이블을 선택하면 입력요소에 커서가 들어간다
+        -->
+        text 
+    </label>
+    <input type="text" id="test" value="텍스트입력" placeholder="아이디 입력" > <br>
+    <label for="password">
+    password 
+    </label>
+    <input type="password" name="" id="password" value="" placeholder="비밀번호를 입력해주세요"> <br>
+    <!--입력창에 x버튼 출력-->
+    <label for="search"> 
+        search
+    </label>
+        <input type="search" name="" id="search"> <br>
+    <!--https 문자가 있는지 체크-->
+    <label for="url">
+    url
+    </label> 
+    <input type="url" name="" id="url"><br>
+    <!--이메일 형식 체크-->
+    <label for="email">
+    email
+    </label>
+    <input type="email" name="" id="email"><br>
+    </fieldset>
+    <!--ctrl+alt+방향키 : 세로 다중 선택
+    체크박스 - 다중선택
+    라디오 - 단일선택, name으로 그룹 구분
+    -->
+    <fieldset>
+        <legend>체크박스/라디오버튼</legend>
+        checkbox - 취미 <br>
+     <input type="checkbox" name="hobby" id="" value="1">축구<br>
+     <input type="checkbox" name="hobby" id="" value="2">농구<br>
+     <input type="checkbox" name="hobby" id="" value="3">배구<br>
+     <input type="checkbox" name="hobby" id="" value="4">야구<br>
+     <input type="checkbox" name="hobby" id="" value="5">구<br>
+    성별 <br>
+    <input type="radio" name="gender" value="1" id="">남<br>
+    <input type="radio" name="gender" value="2" id="">여<br>
+    <input type="radio" name="test" value="3" id="">공격헬기<br>
+
+    <!--min 최소값 max 최대값 step 증가하는 숫자
+    크기 지정 1.태그에 직접 2.상단 3.외부파일-->
+    <input type="number" 
+    name="" id="number" 
+    min="0" max="100" 
+    step="10"
+    >
+</fieldset>
+
+
+    <br>
+    <input type="submit" value="회원가입">
+
+
+</form>
+    
+</body>
+</html>
