@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>개발자 지원서</title>
+    <style>
+        /*
+        내부 스타일 시트
+        */
+        ul
+        { padding: 10;}
+
+        #jiwondonggi{
+            width: 500px;
+            height: 200px;
+        }
+    </style>
+    <!--
+    외부 스타일 재사용
+    절대경로 - 루트로 시작/상대경로
+    ./ : 현재위치 기준
+    ../ : 나의 상위 폴더를 기준
+    -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- style ="" 인라인 스타일(권장 x - 재사용 불가)
+ 
+    -->
+    <h1>프런트엔드 개발자 지원서</h1> <BR>
+<p>
+HTML, CSS, Javascript에 대한 기술적 이해와 경험이 있는 분을 찾습니다.
+</P>
+
+<hr></hr>
+<form action="/jiwon.html" target="_blank">
+<p style="border: 3px dashed black; background-color: #fff; color: red;"><b>개인정보</b></p>
+<ul> <li>이름 <input type="text" name="name" id="이름" placeholder="공백없이 입력하세요" required></li>
+
+<li>연락처 <input type="text" name="phone" id="" required></li></ul> 
+<p><b>지원 분야</b></p>
+ <ul>
+    <li class="red">웹 퍼블리싱  <input type="radio" value="pub" name="jiwonbunya" id="webpub" required></li>
+    <li class="red">웹 애플리케이션 개발 <input type="radio" value="apl" name="jiwonbunya" id="webapl"></li>
+    <li class="red">개발 환경 개선 <input type="radio" value="dev" name="jiwonbunya" id="dev"></li>
+ </ul>
+<p><b>지원동기</b></p>
+본사 지원 동기를 간략히 써 주세요. <br>
+<input type="text" name="jiwondonggi" id="jiwondonggi" placeholder="본사 지원 동기를 써주세요."><br>
+<input type="submit" value="접수하기"> <input type="reset" value="다시쓰기">
+</form>
+</body>
+</html>

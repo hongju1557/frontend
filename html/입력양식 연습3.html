@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>레드향 주문하기</h1>
-    <form action="/jumun.html" target="_blank">
+    <form action="/jumun.html" method="post" target="_blank">
         <fieldset>
             <legend>상품 선택</legend>
             <h4>주문할 상품을 선택해 주세요.</h4>
@@ -27,10 +27,12 @@
 
 
         </fieldset>
+        <br>
         <fieldset>
+            <legend>배송 정보</legend>
             <ul>
-                <li>이름<input type="text" name="" id=""></li><br>
-                <li>배송 주소<input type="text" name="" id=""></li><br>
+                <li>이름 <input type="text" name="" id=""></li><br>
+                <li>배송 주소 <input type="text" name="" id=""></li><br>
                 <li>이메일 <input type="email" name="" id=""></li><br>
                 <li>연락처 <input type="text" name="" id=""></li><br>
                 <li>배송 지정 <input type="date" name="" id=""> (주문일로부터 최소 3일 이후) </li><br>
