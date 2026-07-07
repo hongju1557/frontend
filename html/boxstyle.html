@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box</title>
+    <style>
+        .box{
+            box-sizing: border-box;
+            background-color: red;
+            width: 100px;
+            height: 100px;
+            padding: 0px 30px; /*상하 -> 좌우*/
+       
+            border: 1px solid black;
+            color: white;
+        }
+
+        .box2{
+            box-sizing: border-box;
+            width: 100px;
+            height: 100px;
+            border: 2px solid blue;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 100px;
+            background-color: beige;
+            box-shadow: 4px 4px 10px 3px gray;
+            /* x축 y축 (흐림 퍼짐 - 생략가능)  */
+        }
+        .banner{
+            background-color: blueviolet;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .boxitem{
+            background-color: white;
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+            /* display: inline-block;// */
+            border-radius: 25%;
+        }
+        p {
+            text-align: center;
+
+        }
+/* border radius : 50%일때 동그라미 */
+        .circle{
+            
+            width: 500px;
+            height: 300px;
+            
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        <p> 상자
+
+        </p>
+    </div>
+    <div class="box2">
+            상자2
+            
+
+    </div>
+    <!--
+    #id지정 
+    .class 지정
+    -->
+    
+    <div class="banner">
+        <div id="boxitem" class="boxitem"></div>
+        <div id="boxitem" class="boxitem"></div>
+        <div id="boxitem" class="boxitem"></div>
+        <div id="boxitem" class="boxitem"></div>
+
+    </div>
+
+    <img src="img/salad.jpg" alt="salad" class="circle box2">
+</body>
+</html>
