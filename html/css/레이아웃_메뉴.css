@@ -87,6 +87,7 @@
         .carousel button {
             position: absolute;
             border: none;
+            /* 투명도 */
             opacity: 0.5;
             height: 100%;
             font-weight: 800;

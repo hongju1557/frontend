@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>모달</title>
+    <!-- <a href="css/basic.css"></a> -->
+    <style>
+        /* 변수등록 
+        변수선언
+        --번수명 = 값;
+        */
+        :root{
+            --white : #999
+
+        }
+        .modal-backdrop {
+            background-color: #f7ca94;
+            inset: 0;
+            position: fixed;
+            display: flex;
+            /* 주축에 대한 정렬 */
+            justify-content: center;
+            /* 세로 길이 정렬 */
+            align-items: center;
+        }
+        .modal-box{
+            background-color: var(--white);
+            width: 400px;
+            padding: 20px;
+            position: relative;
+            border-radius: 20px;
+
+        }
+        .modal-box input {
+            width: 100%;
+            height: 30px;
+            font-size: 1.2rem;
+            padding-left: 10px;
+            border: 1px solid #ccc;
+            margin: 10px 0px;
+        }
+        .modal-box .mb-20{
+            margin-bottom: 20px;
+        }
+
+        .modal-close {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+
+            border: none;
+            background-color: white;
+            font-size: 2rem;
+            color: rgb(15, 138, 196);
+        }
+        .btn{
+    
+            color: black;
+        }
+        .h-30{
+            height: 30px;
+        }
+        .w-100{
+            width: 100%;
+        }
+        .bc-blue{
+            background-color: blue;
+        }
+        .border{
+            border: none;
+        }
+        .border-radius{
+            border-radius: 8px;
+        }
+        .fs-large{
+            font-size: 1.2rem;
+        }
+
+        #modalTitle {
+        font-family: "Do Hyeon", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 2rem;
+        }
+        #modalcontent{
+            color: rgb(134, 61, 19);
+            
+        }
+        /* 세로 마진이 중첩되는 경우, 큰 쪽으로 표현된다  */
+        .modal-box h6, .modal-box h3{
+            margin: 0px;
+        }
+    
+
+        .show {
+
+        }
+        /* 구글 폰트 */
+        @import url('https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Hi+Melody&display=swap');
+    </style>
+</head>
+<body>
+<!-- 모달을 여는 버튼 -->
+<button id="loginTrigger">로그인</button>
+
+<!-- 평소엔 숨겨져 있는 백드롭 + 모달 -->
+<div class="modal-backdrop show" id="modalBackdrop">
+  <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="modal-close" id="modalClose" aria-label="닫기">&times;</button>
+    <h3 id="modalTitle">로그인</h3>
+    <h6 id="modalcontent" class="mb-20">이메일과 비밀번호를 입력하세요</h6>
+    <form id="loginForm">
+        <!-- 인라인 속성을 가지고 있는 요소는 마진/패딩 값을 가질 수 없다. -->
+      <label for="email">이메일</label>
+      <input type="email" id="email" required>
+
+      <label for="password">비밀번호</label>
+      <input type="password" id="password" required>
+
+      <button type="submit" class="btn">로그인</button>
+    </form>
+  </div>
+</div> 
+</body>
+</html>
