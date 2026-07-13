@@ -1,0 +1,108 @@
+/* 반응형 메뉴 */
+    header{
+        position: relative;
+        background-color: var(--dark);
+        color: white;
+    }
+  .nav-menu{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        left: 0px;
+        background-color: var(--dark);
+        width: 100%;
+        color: var(--white);
+        gap: 5px;
+        transform: translateX(100%);
+        /* 부드럽게 이동 시켜 주도록 모션을 추가 */
+        transition: transform 0.5s ease;
+  }
+
+  /* 두개의 클래스를 모두 가지고 있으면 */
+  .nav-menu.open{
+    transform: translatex(0%);
+  }
+
+  .nav-menu > li{
+    padding: 5px 60px;
+  }
+
+  /* card */
+
+    .card:hover{
+        transform: translateY(-10px);
+        box-shadow: 3px 1px 20px black; 
+    }
+    .card{
+        transition: transform 1s ease, box-shadow 0.5s ease;
+    }
+
+    .open {
+     
+    }
+    .has-submenu {
+        position: relative;
+    }
+    .has-submenu > a::after {
+        /* 추가하고 싶은 컨텐츠를 쌍따옴표 안에 작성 */
+        display: inline-block;
+        content: "▼";
+        margin-left: 5px;
+        transform: rotate(0deg);
+        transition: transform 0.3s ease;
+    
+    }
+    .has-submenu.open > a::after{
+        transform: rotate(180deg);
+    }
+
+    /* 서브메뉴 초기설절 - 화면에서 숨김 */
+    .submenu {
+        /* 부모 요소의 크기가 줄어들면서 자식요소만 남겨짐
+        겹침현상 -> 
+         */
+        max-height: 0px;
+        overflow: hidden;
+
+        transition: max-height 0.5s ease;
+    }
+
+    .has-submenu.open .submenu {
+        max-height: 120px;
+    }
+
+    /* 뷰포트 폭이 768픽셀 이상일떄만 {}안의 스타일 적용 */
+    @media (min-width:768px) {
+        /* 선택자를 이용해서 요소를 선택하고 스타일을 지정 */
+        .burger {
+            display: none;
+        }
+        .nav-menu {
+            /* 요소를 순서대로 배치 - 기본값 */
+            position: static;
+            flex-direction: row;
+            transform: translateX(0%);
+        }
+        .nav-menu > li {
+            padding: 5px 20px;
+        }
+        .has-submenu{
+            position: relative;
+            max-height: none;
+        }
+        .submenu{
+            position: absolute;
+            background-color: var(--dark);
+            width: 130px;
+        
+            /* 화면에서 숨기기 */
+            visibility: hidden;
+            opacity: 0;
+        }
+        .has-submenu:hover .submenu{
+            visibility: visible;
+            opacity: 1;
+        }
+
+    }

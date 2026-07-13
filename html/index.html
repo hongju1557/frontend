@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>무비 컬렉션 — CSS 선택자 연습</title>
+  <link rel="stylesheet" href="css/basic.css">
+  <link rel="stylesheet" href="css/component.css">
+  <style>
+    tr:nth-child(2n) {
+      background-color: blue;
+      
+    }
+    tr:nth-child(2n) td{
+      color: white;
+    }
+    tr:first-child td{
+      color: aqua;
+    }
+    article:nth-child(2) {
+    border: 1px solid black;
+    
+    }
+
+    td:first-child {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body class="bg-light">
+
+  <header id="site-header" class="d-flex justify-between h-50px">
+    <div class="logo">🎬 무비 컬렉션</div>
+    <nav>
+      <div class="burger">😊</div>
+      <ul class="nav-menu open">
+        <li><a href="#">홈</a></li>
+         <li class="has-submenu">
+          <a href="#">장르</a>
+           <ul class="submenu">
+            <li><a href="#">액션</a></li>
+            <li><a href="#">로맨스</a></li>
+            <li><a href="#">SF</a></li>
+          </ul> 
+        </li>
+        <li><a href="#">랭킹</a></li>
+        <li><a href="#" class="btn-signup ">회원가입</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- 검색 화면 -->
+<!-- flex col : 세로 정렬 items ~ : 교차축 정렬 -->
+  <section class="d-flex flex-col items-center bg-white pb-5">
+    <h1 class="p-5 pb-2">이번 주, 어떤 영화 볼까요?</h1>
+    <p class="text-gray mb-5">큐레이션된 컬렉션에서 다음 영화를 찾아보세요.</p>
+    <form class="search-form">
+      <input class="border-left-2 " type="text" name="keyword" placeholder="영화 제목 검색" required>
+      <select name="genre">
+        <option value="all">전체 장르</option>
+        <option value="action">액션</option>
+        <option value="romance">로맨스</option>
+        <option value="scifi">SF</option>
+      </select>
+      <button type="submit">검색</button>
+    </form>
+  </section>
+
+  <!-- 카드 -->
+
+  <section class="movie-list max-w-lg mt-7 m-auto">
+    <h2 class="border-left-2 my-4 pl-4">이번 달 추천작</h2>
+    <div class="d-flex flex-wrap gap-5 ml-4 mt-5">
+
+      <article class="card rounded-lg overflow-hidden flex-2" data-rating="9.2">
+        <img class="w-100 h-300px object-cover" src="https://picsum.photos/seed/movie1/300/400" alt="스텔라 오디세이 포스터">
+        <div class="card-body px-3 py-5 fs-lg">
+          <h3>스텔라 오디세이</h3>
+          <p class="genre text-gray mb-2">SF · 액션</p>
+          <span class="badge">NEW</span>
+        </div>
+      </article>
+            <article class="card rounded-lg overflow-hidden flex-2" data-rating="9.2">
+        <img class="w-100 h-300px object-cover" src="https://picsum.photos/seed/movie1/300/400" alt="스텔라 오디세이 포스터">
+        <div class="card-body px-3 py-5 fs-lg">
+          <h3>스텔라 오디세이</h3>
+          <p class="genre text-gray mb-2">SF · 액션</p>
+          <span class="badge">NEW</span>
+        </div>
+      </article>
+            <article class="card rounded-lg overflow-hidden flex-2" data-rating="9.2">
+        <img class="w-100 h-300px object-cover" src="https://picsum.photos/seed/movie1/300/400" alt="스텔라 오디세이 포스터">
+        <div class="card-body px-3 py-5 fs-lg">
+          <h3>스텔라 오디세이</h3>
+          <p class="genre text-gray mb-2">SF · 액션</p>
+          <span class="badge">NEW</span>
+        </div>
+      </article>
+            <article class="card rounded-lg overflow-hidden flex-2" data-rating="9.2">
+        <img class="w-100 h-300px object-cover" src="https://picsum.photos/seed/movie1/300/400" alt="스텔라 오디세이 포스터">
+        <div class="card-body px-3 py-5 fs-lg">
+          <h3>스텔라 오디세이</h3>
+          <p class="genre text-gray mb-2">SF · 액션</p>
+          <span class="badge">NEW</span>
+        </div>
+      </article>
+            <article class="card rounded-lg overflow-hidden flex-2" data-rating="9.2">
+        <img class="w-100 h-300px object-cover" src="https://picsum.photos/seed/movie1/300/400" alt="스텔라 오디세이 포스터">
+        <div class="card-body px-3 py-5 fs-lg">
+          <h3>스텔라 오디세이</h3>
+          <p class="genre text-gray mb-2">SF · 액션</p>
+          <span class="badge">NEW</span>
+        </div>
+      </article>
+            <article class="card rounded-lg overflow-hidden flex-2" data-rating="9.2">
+        <img class="w-100 h-300px object-cover" src="https://picsum.photos/seed/movie1/300/400" alt="스텔라 오디세이 포스터">
+        <div class="card-body px-3 py-5 fs-lg">
+          <h3>스텔라 오디세이</h3>
+          <p class="genre text-gray mb-2">SF · 액션</p>
+          <span class="badge">NEW</span>
+        </div>
+      </article>
+      
+    </div>
+  </section>
+
+  <!-- 테이블 -->
+  <section class="max-w-lg m-auto">
+    <h2 class="title">실시간 랭킹</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>순위</th>
+          <th>제목</th>
+          <th>평점</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>도시의 밤</td><td>9.8</td></tr>
+        <tr><td>2</td><td>파랑의 계절</td><td>9.5</td></tr>
+        <tr><td>3</td><td>스텔라 오디세이</td><td>9.2</td></tr>
+        <tr><td>4</td><td>마지막 항해</td><td>9.0</td></tr>
+        <tr><td>5</td><td>여름의 문</td><td>8.7</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <footer id="site-footer">
+    <div class="footer-links">
+      <ul>
+        <li><a href="#">이용약관</a></li>
+        <li><a href="#">개인정보처리방침</a></li>
+        <li><a href="#">문의하기</a></li>
+      </ul>
+    </div>
+    <p class="copyright">&copy; 2026 무비 컬렉션. All rights reserved.</p>
+  </footer>
+
+
+  <script>
+// 1. 화면에 있는 요소 선택
+// 2. 요소에 이벤트를 적용
+
+    const burger = document.querySelector('.burger');
+    const menu = document.querySelector('.nav-menu');
+
+    // 1. 버거 클릭 → 메뉴 슬라이드 토글
+    burger.addEventListener('click', () => {
+      // 토글 - 있으면 뺴고 없으면 넣음
+      // 요소에 open 이란 클래스를 넣고 뻄
+      menu.classList.toggle('open');
+    });
+
+    // 2. "장르" 클릭 → 서브메뉴 아코디언 토글 (모바일에서만 의미 있음)
+    document.querySelectorAll('.has-submenu > a').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();  // # 링크 이동 방지
+        link.parentElement.classList.toggle('open');
+      });
+    });
+
+    
+  </script> 
+</body>
+</html>
