@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>무비 컬렉션 — CSS 선택자 연습</title>
   <link rel="stylesheet" href="css/basic.css">
+<<<<<<< HEAD
   <link rel="stylesheet" href="css/component.css">
   <style>
     tr:nth-child(2n) {
@@ -42,6 +43,23 @@
             <li><a href="#">로맨스</a></li>
             <li><a href="#">SF</a></li>
           </ul> 
+=======
+</head>
+<body>
+
+  <header id="site-header" class="lh-25 d-flex bg-dark text-white pos-relative">
+    <div class="logo pos-absolute items-center fs-3xl">🎬 무비 컬렉션</div>
+    <nav>
+      <ul class="nav-menu text-right">
+        <li><a href="#">홈</a></li>
+        <li class="has-submenu">
+          <a href="#">장르</a>
+          <ul class="submenu">
+            <li><a href="#">액션</a></li>
+            <li><a href="#">로맨스</a></li>
+            <li><a href="#">SF</a></li>
+          </ul>
+>>>>>>> a5ba30e40af32f591eb5514a35a15fa69282d6fd
         </li>
         <li><a href="#">랭킹</a></li>
         <li><a href="#" class="btn-signup ">회원가입</a></li>
@@ -49,6 +67,7 @@
     </nav>
   </header>
 
+<<<<<<< HEAD
   <!-- 검색 화면 -->
 <!-- flex col : 세로 정렬 items ~ : 교차축 정렬 -->
   <section class="d-flex flex-col items-center bg-white pb-5">
@@ -56,6 +75,13 @@
     <p class="text-gray mb-5">큐레이션된 컬렉션에서 다음 영화를 찾아보세요.</p>
     <form class="search-form">
       <input class="border-left-2 " type="text" name="keyword" placeholder="영화 제목 검색" required>
+=======
+  <section class="hero">
+    <h1>이번 주, 어떤 영화 볼까요?</h1>
+    <p>큐레이션된 컬렉션에서 다음 영화를 찾아보세요.</p>
+    <form class="search-form">
+      <input type="text" name="keyword" placeholder="영화 제목 검색" required>
+>>>>>>> a5ba30e40af32f591eb5514a35a15fa69282d6fd
       <select name="genre">
         <option value="all">전체 장르</option>
         <option value="action">액션</option>
@@ -66,6 +92,7 @@
     </form>
   </section>
 
+<<<<<<< HEAD
   <!-- 카드 -->
 
   <section class="movie-list max-w-lg mt-7 m-auto">
@@ -127,6 +154,71 @@
   <!-- 테이블 -->
   <section class="max-w-lg m-auto">
     <h2 class="title">실시간 랭킹</h2>
+=======
+  <section class="movie-list">
+    <h2>이번 달 추천작</h2>
+    <div class="grid">
+
+      <article class="card" data-rating="9.2">
+        <img src="https://picsum.photos/seed/movie1/300/400" alt="스텔라 오디세이 포스터">
+        <div class="card-body">
+          <h3>스텔라 오디세이</h3>
+          <p class="genre">SF · 액션</p>
+          <span class="badge">NEW</span>
+        </div>
+      </article>
+
+      <article class="card featured" data-rating="9.8">
+        <img src="https://picsum.photos/seed/movie2/300/400" alt="도시의 밤 포스터">
+        <div class="card-body">
+          <h3>도시의 밤</h3>
+          <p class="genre">스릴러 · 드라마</p>
+          <span class="badge">HOT</span>
+        </div>
+      </article>
+
+      <article class="card" data-rating="8.7">
+        <img src="https://picsum.photos/seed/movie3/300/400" alt="여름의 문 포스터">
+        <div class="card-body">
+          <h3>여름의 문</h3>
+          <p class="genre">로맨스</p>
+          <span class="badge">NEW</span>
+        </div>
+      </article>
+
+      <article class="card" data-rating="9.0">
+        <img src="https://picsum.photos/seed/movie4/300/400" alt="마지막 항해 포스터">
+        <div class="card-body">
+          <h3>마지막 항해</h3>
+          <p class="genre">모험 · SF</p>
+          <span class="badge">NEW</span>
+        </div>
+      </article>
+
+      <article class="card" data-rating="8.4">
+        <img src="https://picsum.photos/seed/movie5/300/400" alt="붉은 골목 포스터">
+        <div class="card-body">
+          <h3>붉은 골목</h3>
+          <p class="genre">미스터리</p>
+          <span class="badge">HOT</span>
+        </div>
+      </article>
+
+      <article class="card" data-rating="9.5">
+        <img src="https://picsum.photos/seed/movie6/300/400" alt="파랑의 계절 포스터">
+        <div class="card-body">
+          <h3>파랑의 계절</h3>
+          <p class="genre">드라마</p>
+          <span class="badge">NEW</span>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="ranking">
+    <h2>실시간 랭킹</h2>
+>>>>>>> a5ba30e40af32f591eb5514a35a15fa69282d6fd
     <table>
       <thead>
         <tr>
@@ -156,6 +248,7 @@
     <p class="copyright">&copy; 2026 무비 컬렉션. All rights reserved.</p>
   </footer>
 
+<<<<<<< HEAD
 
   <script>
 // 1. 화면에 있는 요소 선택
@@ -181,5 +274,7 @@
 
     
   </script> 
+=======
+>>>>>>> a5ba30e40af32f591eb5514a35a15fa69282d6fd
 </body>
 </html>
