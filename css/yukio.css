@@ -3,7 +3,7 @@ header {
     color: white;
     display: flex;
     justify-content: space-between;
-    position: relative;
+    align-items: center;
 }
 .yukio{
  
@@ -18,4 +18,21 @@ header {
 }
 ul li {
     list-style: none;
+}
+.yukio-book {
+    display: grid;
+    grid-template-columns: repeat(3,350px);
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 1200px;
+    margin: 0 auto;
+}
+.bookcard {
+    width: 250px;
+    height: 200px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px;
+    rgba (0,0,0,0.2)
 }
