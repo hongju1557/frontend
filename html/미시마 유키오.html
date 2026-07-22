@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>미시마유키오</title>
+    <title>미시마 유키오</title>
     <link rel="stylesheet" href="/frontend-1/css/yukio.css">
 </head>
 <body>
     <header>
-        <h1 class="yukio">미시마유키오</h1>
+        <h1 class="yukio">미시마 유키오</h1>
         <nav>
             <ul class="yukio-list">
                 <li>인생</li>
@@ -51,14 +51,17 @@
     </section>
 
     <div class="yukio-carousel">
-        <button class="yukio-carousel-preview" onclick="prevSlide()"></button>
+        <button class="yukio-carousel-button prev" onclick="prevSlide()"></button>
         <div class="yukio-track">
-            <img class="slide active" src="" alt="유키오1">
-            <img class="slide active" src="" alt="유키오2">
-            <img class="slide active" src="" alt="유키오3">
+            <img class="slide active" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtqVHtPmgwq_RHnEtT_6iTesZ39zPukFLUbaCMyPPuUw&s=10" alt="유키오1">
+            <img class="slide" src="" alt="유키오2">
+            <img class="slide" src="" alt="유키오3">
         </div>
     </div>
+
+    <button class="yukio-carousel-button next" onclick="nextSlide()"></button>
     
     </main>
+    <script src="/frontend-1/js/yukio.js"></script>
 </body>
 </html>

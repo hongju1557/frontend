@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //객체
+        let movie = {
+            title : '영화'
+            , rating : 9.2
+        }
+        
+        //배열 - 여러개를 담을 수 있다
+        // let movies = [
+        //     {title : '영화1', rating : 9.2 },
+        //     {title : '영화2', rating : 3.2 },
+        //     {title : '영화3', rating : 7.2 },
+        // ]
+
+        //함수를 이용해서 객체를 만들기
+        //1. 팩토리 방식 : 함수 내부에서 객체를 만들어서 반환
+
+        function createMovie(title, rating) {
+  const movie = {
+    title: title,
+    rating: rating,
+  };
+  return movie;
+}
+
+const m1 = createMovie("도시의 밤", 9.8);
+
+let movies_arr = [createMovie('영화1', 9.2)
+,createMovie('영화1', 3.2)
+,createMovie('영화1', 7.2)]
+movie = createMovie('영화4',9.7)
+
+
+
+//배열는 오소를 추가하기
+movies_arr.push()
+console.log('movies_arr', movies_arr)
+console.log(createMovie("호프",1.0))
+
+//2. 생성자  함수를 이용
+//this 키워드를 이용해서 속성을 만듬
+// 매개변수로 값을 받아서 객체를 초기화
+//매개변수로 값을 받아서 객체를 초기화
+function Movie(title, rating){
+    console.log('new.target', new.target)
+    //거짓일때 실행 되게 하려면 앞에 !를 붙이기
+    if(!new.target)
+    throw new error('키워드가 없습니다. 객체를 생성할 수 없습니다.')
+
+ this.title = title
+ this.rating = rating
+}
+
+    </script>
+    
+</body>
+</html>
